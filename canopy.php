@@ -45,9 +45,9 @@ for ($product_number = 0; $product_number < 100; $product_number++) {
     foreach ($sxml->Items->Item as $Item) { // Loops To Find Proper XML Values
        $product_link = isset($Item->DetailPageURL) ? $Item->DetailPageURL : ''; // Your Associate URL
        $product_niche = isset($Item->ItemAttributes->Binding) ? $Item->ItemAttributes->Binding : 'Other';
-       $product_rating_url = isset($Item->ItemLinks->ItemLink[5]->URL) ? $Item->ItemLinks->ItemLink[5]->URL : 'Straight Fucked';
+       $product_rating_url = isset($Item->ItemLinks->ItemLink[5]->URL) ? $Item->ItemLinks->ItemLink[5]->URL : 'No Rating';
 
-       if($product_rating_url !== 'Straight Fucked') {
+       if($product_rating_url !== 'No Rating') {
          $review_page = file_get_html($product_rating_url);
          $product_rating = $review_page->find('.arp-rating-out-of-text', 0)->plaintext;
          $product_rating = round_to_half((float)substr($product_rating, 0, 3));
