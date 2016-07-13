@@ -25,6 +25,25 @@ function getDescription($description) {
   }
 }
 
+function getBestSellers() {
+  $best_sellers = file_get_html('https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/');
+  $best_seller_links = array();
+
+  $best_seller_links[0] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(0)->innertext);
+  $best_seller_links[1] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(1)->innertext);
+  $best_seller_links[2] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(2)->innertext);
+  $best_seller_links[3] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(3)->innertext);
+  $best_seller_links[4] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(4)->innertext);
+  $best_seller_links[5] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(5)->innertext);
+  $best_seller_links[6] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(6)->innertext);
+  $best_seller_links[7] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(7)->innertext);
+  $best_seller_links[8] = getProductLink($best_sellers->find("#zg_browseRoot", 0)->children(1)->children(1)->children(8)->innertext);
+  $best_seller_links[9] = 'https://www.amazon.com/gp/most-gifted/toys-and-games/';
+  $best_seller_links[10] = 'https://www.amazon.com/best-sellers-books-Amazon/zgbs/books/';
+
+  return $best_seller_links;
+}
+
 function getProductLink($product_element) {
   preg_match('/href=(["\'])([^\1]*)\1/i', $product_element, $m);
   $m[2] = current(explode("?", $m[2]));

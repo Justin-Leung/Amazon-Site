@@ -15,11 +15,10 @@ if($result = $db->query('SELECT * FROM products')) {
     while ($row = $result->fetch_assoc()) {
 
       $product_name = ucwords(trim($row['product_name']));
-      $product_name = str_replace(",", "", $product_name);
-      $product_name = str_replace(":", "", $product_name);
+      $product_name = str_replace("\"", "", $product_name);
+      $product_name = substr($product_name, 0, 60);
       $product_price = substr($row['price'], 1);
-      $product_price = (int)$product_price;
-
+      $product_price = (float)$product_price;
       $product_price = round($product_price);
 
       if($product_price == 0) {
@@ -65,6 +64,16 @@ if($result = $db->query('SELECT * FROM products')) {
 
 <script type="text/javascript">
 
+  function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+  }
+
   var temp = "<li><div class='cell' style='width:{width}px; height: {height}px; background-color: #fff;'><span class='product_name'>{name}</span><div class='top-right'><a href='' class='price-tag'>{price}</a></div><div class='top-left'><a href='' class='reviews'>{rating}</a></div><img class='product-image' src='{image}'></div></li>";
   var w = 200, h = 200, html = '', limitItem = <?php echo $count; ?>;
 
@@ -72,9 +81,17 @@ if($result = $db->query('SELECT * FROM products')) {
   var product_price = <?php echo $product_price_array . ';'; ?>
   var product_image = <?php echo $product_image_array . ';'; ?>
   var product_rating = <?php echo $product_rating_array . ';'; ?>
+  var random_nums = [];
+
+  for(var j = 0; j < product_rating.length; j++) {
+    random_nums.push(j);
+  }
+
+  shuffle(random_nums);
 
   for (var i = 0; i < limitItem; ++i) {
-    html += temp.replace(/\{height\}/g, h).replace(/\{width\}/g, w).replace("{name}", product_name[i]).replace("{price}", '$' + product_price[i]).replace("{image}", product_image[i]).replace("{rating}", product_rating[i]);
+    num = random_nums[i];
+    html += temp.replace(/\{height\}/g, h).replace(/\{width\}/g, w).replace("{name}", product_name[num]).replace("{price}", '$' + product_price[num]).replace("{image}", product_image[num]).replace("{rating}", product_rating[num]);
   }
   $("#product-wall").html(html);
 
