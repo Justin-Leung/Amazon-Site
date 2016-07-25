@@ -8,7 +8,7 @@
 </div>
 <div class="six columns">
   <article>
-    <ul class="vertical default_list_data free-wall" id="product-wall" style="list-style: none;padding-left: 0px;">
-    </ul>
+    <div class="vertical default_list_data free-wall" id="product-wall" style="list-style: none;padding-left: 0px;">
+    </div>
   </article>
 </div>

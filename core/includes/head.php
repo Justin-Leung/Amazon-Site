@@ -29,14 +29,19 @@
 
   <style type="text/css">
     .product-wall {
-      margin: 15px;
+      margin: 100px !important;
     }
   </style>
   <script type="text/javascript" src="assets/extra/freewall.js"></script>
 
 <?php
 
+if($google_analytics !== '') {
+  echo $google_analytics;
+}
+
 if($color !== '') {
+
   echo '
   <style>
 
@@ -75,9 +80,14 @@ if($color !== '') {
     border-color: ' . $color . ';
   }
 
-  .price-tag {
-  	background-color: ' . $color . ';
+  .product-selection a:hover {
+    color: ' . $color . ';
+    border-color: ' . $color . ';
   }
+
+  .sale-tag {
+    background-color: ' . $color . ';
+}
 
   </style>
   ';

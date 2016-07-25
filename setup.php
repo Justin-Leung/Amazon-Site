@@ -5,11 +5,12 @@
 */
 
 // Main Settings
-$site_name = 'JustinLeung'; // Websites Header Text
+$site_name = 'Ecommerce'; // Websites Header Text
 $tagline = ''; // Website Tagline
 $description = ''; // Website Description
-$color = ''; // Default #2fdab8
+$color = '#ED9282'; // Default #2fdab8
 $google_analytics = ''; // Copy and Paste Your Google Analytics Code Here
+$site_icon = ''; // Default is a price tag. Options 'cart, tag, fire, basket, cash' enter in the name like: $site_icon = 'cash';
 
 // Amazon Access
 $AccessKeyId = 'AKIAIYSQWY6GDGHTEZGQ';

@@ -1,6 +1,11 @@
 <div class="col-md-6">
   <div class="col-md-2 logo">
-    <span class="ss-icon">cart</span>
+    <span class="ss-icon">
+      <?php
+      if($site_icon !== '') echo $site_icon;
+      else echo 'tag';
+      ?>
+    </span>
   </div>
   <div class="col-md-10 headline">
     <h2><?php echo getWebsiteName($site_name) ?></h2>

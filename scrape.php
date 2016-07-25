@@ -59,7 +59,7 @@ for ($product_number=0; $product_number < 29; $product_number++) {
   $product_asin = getASIN($product_url);
 
   /* Step #3 */
-  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
+  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/core/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
 
   /* Step #4 */
   if(!isset($sxml->Items->Request->Errors->Error->Message) && isset($sxml->Items->Item)) {
@@ -86,20 +86,12 @@ for ($product_number=0; $product_number < 29; $product_number++) {
       $product_rating = round_to_half((float)substr($product_rating, 0, 3));
 
       /* Price */
-      /*
-      if(is_object($amazon_page->find('.zg_price', $p)->children(1))) {
-        $product_list_price = $amazon_page->find('.zg_price', $p)->children(0)->plaintext;
-        $product_price = $amazon_page->find('.zg_price', $p)->children(1)->plaintext . 'SALE' . $product_list_price;
-      } else {
-        $product_list_price = '';
-        $product_price = $amazon_page->find('.zg_price', $p)->children(0)->plaintext;
-      }
-      */
-
       $product_price = $amazon_page->find('.zg_price', $p)->children(0)->plaintext;
 
       if(is_object($amazon_page->find('.zg_price', $p)->children(1))) {
         $product_price_discount = $amazon_page->find('.zg_price', $p)->children(1)->plaintext;
+      } else {
+        $product_price_discount = 'N/A';
       }
 
       /* Image Link */
@@ -113,11 +105,12 @@ for ($product_number=0; $product_number < 29; $product_number++) {
   if (!in_array($product_asin, $products)) {
     $products[$product_number] = $product_asin;
 
-    if($insert = $db->query("INSERT INTO `amazon`.`products` (`id`, `product_name`, `niche`, `link`, `image_link`, `price`, `rating`, `asin`) VALUES (NULL, '{$product_name}', '{$product_niche}', '{$product_link}', '{$product_image}', '{$product_price}', '{$product_rating}', '{$product_asin}')")) {
+    if($insert = $db->query("INSERT INTO `amazon`.`products` (`id`, `product_name`, `niche`, `link`, `image_link`, `price`, `discount`, `rating`, `asin`) VALUES (NULL, '{$product_name}', '{$product_niche}', '{$product_link}', '{$product_image}', '{$product_price}', '{$product_price_discount}', '{$product_rating}', '{$product_asin}')")) {
       echo 'Inserted <br>';
       echo $product_name . '<br>';
       echo $product_niche . '<br>';
       echo $product_price .  '<br>';
+      echo $product_price_discount .  '<br>';
       echo $product_image . '<br>';
       echo $product_asin . '<br>';
       echo $product_rating . '<br>';
@@ -145,7 +138,7 @@ for ($product_number=30; $product_number < 66; $product_number++) {
   $product_asin = getASIN($product_url);
 
   /* Step #3 */
-  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
+  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/core/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
 
   /* Step #4 */
   if(!isset($sxml->Items->Request->Errors->Error->Message) && isset($sxml->Items->Item)) {

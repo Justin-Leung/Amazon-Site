@@ -20,7 +20,7 @@
       <div class="col-sm-3 col-sm-offset-2 option-type price-range">
         <p>
           <label for="amount" style="color: #8c7f72; font-size: 18px;">Price range:</label>
-          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; padding-bottom: 13px; text-align: center;">
+          <input type="text" id="amount" readonly style="border: none !important; color:#f6931f; font-weight:bold; padding-bottom: 13px; text-align: center;">
           <br>
         </p>
 

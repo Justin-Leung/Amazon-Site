@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var wall = new Freewall("#product-wall");
+
   var options = false;
 
   $('.options').click(function(e) {
@@ -15,7 +17,20 @@ $(document).ready(function() {
       $('.price-range').fadeOut(500);
       $('.option-type-checkbox').fadeOut(500);
       options = false;
+
+      wall.filter("#1-2");
+      wall.reset({
+        selector: '.cell',
+        onResize: function() {
+          wall.refresh();
+        }
+      });
+
     }
+  });
+
+  $('.cell').click(function(e) {
+    window.open($(this).attr('href'),'_blank');
   });
 
 });
