@@ -5,12 +5,16 @@
 */
 
 // Main Settings
-$site_name = 'Ecommerce'; // Websites Header Text
+$site_name = ''; // Websites Header Text
 $tagline = ''; // Website Tagline
 $description = ''; // Website Description
-$color = '#ED9282'; // Default #2fdab8
 $google_analytics = ''; // Copy and Paste Your Google Analytics Code Here
 $site_icon = ''; // Default is a price tag. Options 'cart, tag, fire, basket, cash' enter in the name like: $site_icon = 'cash';
+
+// Styling
+$color = '#9DC3C1'; // Main Color Styling
+$button_color = '#6E7783'; // Buy Now Button Color
+$sale_color = '#77AAAD'; // Sale Button Color
 
 // Amazon Access
 $AccessKeyId = 'AKIAIYSQWY6GDGHTEZGQ';

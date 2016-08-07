@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8888/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>The Best Products, All The Time. | localhost:8888</title>
+
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+<!-- General -->
+<meta name="description" content="Find the best products out there that don&#39;t break the bank. Search a vast selection of products that are hot on the market as we speak!">
+<!-- Styling -->
+<link rel="stylesheet" href="./The Best Products, All The Time. _ localhost_8888_files/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="./The Best Products, All The Time. _ localhost_8888_files/style.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="./The Best Products, All The Time. _ localhost_8888_files/ss-pika.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="./The Best Products, All The Time. _ localhost_8888_files/jquery-ui.css">
+<script src="./The Best Products, All The Time. _ localhost_8888_files/jquery.min.js"></script>
+<script src="./The Best Products, All The Time. _ localhost_8888_files/list.min.js"></script>
+<script src="./The Best Products, All The Time. _ localhost_8888_files/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 2, 180 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
+  </script>
+
+
+  <style>
+
+  .logo .ss-icon {
+    color: #9DC3C1;
+  }
+
+  .product-selection #active {
+    color: #fff;
+    background-color: #9DC3C1;
+    border-color: #9DC3C1;
+  }
+
+  .search .ss-icon {
+    color: #9DC3C1;
+  }
+
+  .top-image {
+  	padding-top: 10px;
+  	background:
+  	 linear-gradient(
+  		 rgba(157,195,193,0.7),
+  		 rgba(157,195,193,0.7)
+  	 ),
+  	 url("/assets/img/top-bar-bw.jpg") repeat-x;
+  }
+
+  input[name=main-search] {
+    color: #9DC3C1 !important;
+    font-size: 17px !important;
+    font-weight: 500px;
+    letter-spacing: 0.3px;
+  }
+
+  .ui-widget-header {
+    background: #9DC3C1 !important;
+  }
+
+  #amount {
+    color: #9DC3C1 !important;
+  }
+
+  .main-search:focus {
+    border-color: #9DC3C1;
+  }
+
+  .product-selection a:hover {
+    border-color: #9DC3C1;
+    background-color: #9DC3C1;
+  }
+
+  .sale-tag {
+    background-color: #9DC3C1;
+  }
+
+  </style>
+  
+  <style>
+
+    .bottom-center {
+      background-color: #6E7783;
+    }
+
+  </style>
+  
+  <style>
+
+    .sale-tag {
+      background-color: #77AAAD;
+    }
+
+  </style>
+    </head>
+  <body>
+
+    <div class="top-image"></div>
+
+    <!-- Header Section -->
+    <section class="header">
+      <div class="container">
+        <div class="row header-elements">
+          <div class="col-md-6">
+  <div class="col-md-2 logo">
+    <span class="ss-icon">
+      tag    </span>
+  </div>
+  <div class="col-md-10 headline">
+    <h2>localhost:8888</h2>
+    <p>The Best Products, All The Time.</p>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="form-group search">
+    <input type="text" class="form-control main-search search" name="main-search" placeholder="Search Products" id="main-search" data-toggle="hideseek" data-list=".default_list_data" data-nodata="No Products Found!" autocomplete="off">
+    <span class="ss-icon">search</span>
+  </div>
+</div>
+        </div>
+        
+<div class="row product-selection">
+  <div class="col-sm-12">
+    <a class="niche all" id="active">All</a>
+    <a class="niche">Books</a>
+    <a class="niche">Movies</a>
+    <a class="niche">Electronics</a>
+    <a class="niche">Home</a>
+    <a class="niche">Beauty</a>
+    <a class="niche">Toys</a>
+    <a class="niche">Clothing</a>
+    <a class="niche">Outdoors</a>
+    <span class="fa fa-gear options tilt"></span>
+  </div>
+
+  <br><br><br>
+
+  <div class="product-options">
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-2 option-type price-range">
+        <p>
+          <label for="amount" style="color: #8c7f72; font-size: 18px;">Price range:</label>
+          <input type="text" id="amount" readonly="" style="border: none !important; color:#f6931f; font-weight:bold; padding-bottom: 13px; text-align: center;">
+          <br>
+        </p>
+
+        <div id="slider-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0.4%; width: 35.6%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0.4%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 36%;"></span></div>
+      </div>
+
+      <div class="col-sm-3 option-type-checkbox">
+        <form action="http://localhost:8888/">
+          <div class="checkbox-option">
+            <input type="checkbox" name="check-opt" id="Shipping" value=""><span class="checkbox-text">Free Shipping</span><br>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" name="check-opt" id="Special" value=""><span class="checkbox-text">Special Offers Only</span><br>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" name="check-opt" id="Auctions" value=""><span class="checkbox-text">No Auctions</span>
+          </div>
+          </form>
+      </div>
+
+      <div class="col-sm-3 option-type-select">
+        <p>
+          Sorting
+        </p>
+        <hr>
+        <select id="sorting">
+          <option value="Relevance">Relevance</option>
+          <option value="Ascending">Price Ascending</option>
+          <option value="Descending">Price Descending</option>
+        </select>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+    <!-------------------->
+
+    <!-- Product Display Area -->
+    <section class="products">
+      <div class="container-fluid maxWidth">
+        <div class="row">
+           <div class="six columns" style="display: none;">
+   <article id="attribute">
+     <h4>The attribute "data-toggle"</h4>
+   <pre data-language="javascript">   <input data-toggle="hideseek">
+   </pre>
+   </article>
+ </div>
+
+ <div class="row">
+ 	  <div class="col-sm-12" id="products">
+
+      <div class="six columns">
+          <article>
+
+      <ul class="list vertical default_list_data"><li class="electronics prd shipping offers" id="789">
+                <p class="born" style="display: none;" id="price">7</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Panasonic-Headphones-RP-HJE120-K-Comfort-Fit-Compatible/dp/B003EM8008/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/31-nuw-iqAL.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$7.89 <strike>$28.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Panasonic ErgoFit Best In Class In-Ear Earbud Headphones<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="toys prd shipping offers" id="2499">
+                <p class="born" style="display: none;" id="price">24</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Cards-Against-Humanity-LLC-CAHUS/dp/B004S8F7QM/ref=zg_bs_toys-and-games_1" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/41OYMigTzeL._AC_UL320_SR282,320_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$24.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Cards Against Humanity<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="outdoors prd shipping offers" id="2947">
+                <p class="born" style="display: none;" id="price">29</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Leatherman-Wingman-Multi-Tool-Stainless-Steel/dp/B005DI0XM4/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/412e81ONPWL._SX466_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$29.47
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Leatherman - Wingman Multi-Tool, Stainless Steel<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="1595">
+                <p class="born" style="display: none;" id="price">15</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/RTIC-RTIC30-30-oz-Tumbler/dp/B019D9HESO/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/31o0goKiY-L.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$15.95 <strike>$17.35</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> RTIC 30 Oz. Tumbler<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="3599">
+                <p class="born" style="display: none;" id="price">35</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Portable-RAVPower-16750mAh-Technology-Lightning/dp/B00MQSMDYU/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/41vynM771AL.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$35.99 <strike>$64.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> External Battery RAVPower 16750mAh Portable Charger<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="1399">
+                <p class="born" style="display: none;" id="price">13</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/KMASHI-10000mAh-External-Battery-Portable/dp/B00JM59JPG/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/51m4oNi7ldL._SX522_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$13.99 <strike>$69.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> KMASHI 10000mAh External Battery Power Bank<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="2899">
+                <p class="born" style="display: none;" id="price">28</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/SanDisk-Ultra-SDCZ43-128G-GAM46-Newest-Version/dp/B01BGTG2A0/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/61QGF0DVSOL._SY679_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$28.99 <strike>$39.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> SanDisk Ultra Fit 128GB USB 3.0 Flash Drive<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="other prd shipping offers" id="865">
+                <p class="born" style="display: none;" id="price">8</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Sargent-Art-22-7251-Colored-Assorted/dp/B0027PA1AU" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/71grY4U4mgL._SX522_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$8.65 <strike>$19.75</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Sargent Art 22-7251 Colored Pencils, Pack Of 50, Assorted Colors<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="1395">
+                <p class="born" style="display: none;" id="price">13</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/AmazonBasics-Microfiber-Cleaning-Cloth-Pack/dp/B009FUF6DM/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/91Nw5vN+CQL._SX522_PIbundle-24,TopRight,0,0_SX374SY522SH20_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$13.95
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> AmazonBasics Microfiber Cleaning Cloth - 24 Pack<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="beauty prd shipping offers" id="1897">
+                <p class="born" style="display: none;" id="price">18</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Philips-Norelco-Multigroom-attachments-QG3330/dp/B00ARF42H0/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/61GXd5VfFnL._SL1300_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$18.97 <strike>$19.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Philips Norelco Multigroom Series 3100, 5 Attachments, QG3330<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="beauty prd shipping offers" id="1076">
+                <p class="born" style="display: none;" id="price">10</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Q-tips-Cotton-Swabs-Count-Pack/dp/B00005304H/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/81H21iKKU9L._SY679_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$10.76 <strike>$14.44</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Q-tips Cotton Swabs, 500 Count (Pack Of 4)<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="799">
+                <p class="born" style="display: none;" id="price">7</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/AmazonBasics-Apple-Certified-Lightning-Cable/dp/B010S9N6OO/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/71soxnP9Q+L._SL1399_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$7.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> AmazonBasics Apple Certified Lightning To USB Cable - 6 Feet (1.8 Mete..<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="549">
+                <p class="born" style="display: none;" id="price">5</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/AmazonBasics-High-Speed-HDMI-Cable-Standard/dp/B014I8SSD0/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/71pFDaZU8lL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$5.49
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> AmazonBasics High-Speed HDMI Cable - 6 Feet (Latest Standard)<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="1234">
+                <p class="born" style="display: none;" id="price">12</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/AmazonBasics-Performance-Alkaline-Batteries-48-Pack/dp/B00MNV8E0C/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/911DjgBE5wL._SX522_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$12.34 <strike>$12.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> AmazonBasics AA Performance Alkaline Batteries (48-Pack)<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="1919">
+                <p class="born" style="display: none;" id="price">19</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/SanDisk-microSDXC-Standard-Packaging-SDSQUNC-064G-GN6MA/dp/B010Q588D4/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/61fslgOdQCL._SL1200_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$19.19 <strike>$59.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> SanDisk Ultra 64GB MicroSDXC UHS-I Card With Adapter, Grey/Red<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="2799">
+                <p class="born" style="display: none;" id="price">27</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Cambridge-SoundWorks-OontZ-Angle-Generation/dp/B010OYASRG/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/712YnPWCEkL._SL1001_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$27.99 <strike>$99.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Cambridge SoundWorks OontZ Angle 3 Next Generation Ultra Portable Wire..<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="795">
+                <p class="born" style="display: none;" id="price">7</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/iPhone-Screen-Protector-amFilm-Tempered/dp/B01415QHYW/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/71gO96OjWzL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$7.95 <strike>$29.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> IPhone 6S Tempered Glass Screen Protector For Apple IPhone 6, IPhone 6..<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="clothing prd shipping offers" id="935">
+                <p class="born" style="display: none;" id="price">9</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Champion-Mens-Long-Short-Pockets/dp/B002VLZH7M/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/81n+HovBsSL._UX342_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$9.35
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Champion Men's Long Mesh Short With Pockets<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="clothing prd shipping offers" id="725">
+                <p class="born" style="display: none;" id="price">7</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Retro-Rewind-Polarized-Wayfarer-Sunglasses/dp/B014B4XUB6/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/41VAXCUWUML._UX679_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$7.25
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-o"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Retro Rewind Classic Polarized Wayfarer Sunglasses<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="outdoors prd shipping offers" id="1699">
+                <p class="born" style="display: none;" id="price">16</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Tactical-Flashlight-Resistant-Camping-Adjustable/dp/B01DF2MNCM/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/612bhScdMwL._SL1000_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$16.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Ultra Bright CREE XML T6 LED 600 Lumen Tactical Flashlight<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="2450">
+                <p class="born" style="display: none;" id="price">24</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Sennheiser-202-Professional-Headphones-Black/dp/B003LPTAYI/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/71OJzVOZ5HL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$24.50 <strike>$34.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-o"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Sennheiser HD 202 II Professional Headphones (Black)<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="clothing prd shipping offers" id="2999">
+                <p class="born" style="display: none;" id="price">29</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/JanSport-T501-SuperBreak-Backpack/dp/B0007QCSKM/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/61ro3sBG5HL._UX385_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$29.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> JanSport T501 SuperBreak Backpack<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="199">
+                <p class="born" style="display: none;" id="price">19</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/KRUPS-Electric-Grinder-Stainless-3-Ounce/dp/B00004SPEU/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/81OJ6qwKxyL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$19.9
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> KRUPS F203 Electric Spice And Coffee Grinder With Stainless Steel Blad..<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="outdoors prd shipping offers" id="2798">
+                <p class="born" style="display: none;" id="price">27</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/InnoGear-Headlight-Flashlight-Rechargeable-Batteries/dp/B00OUOS0PE/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/61KopXDrpAL._SL1001_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$27.98 <strike>$59.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> InnoGear 5000 Lumen Bright Headlight Headlamp Flashlight Torch<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="744">
+                <p class="born" style="display: none;" id="price">7</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Panasonic-Headphones-Lightweight-Comfortable-Audiophile/dp/B00004T8R2/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/41OfTYsUX1L.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$7.44
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Panasonic Best In Class On-Ear Stereo Headphones RP-HT21 (Black &amp; Silv..<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="clothing prd shipping offers" id="1199">
+                <p class="born" style="display: none;" id="price">11</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Fruit-Loom-6-Pack-Tucked-T-Shirt/dp/B00XWUD2N2/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/81UxhkSlBjL._UX342_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$11.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Fruit Of The Loom Men's 6-Pack Stay Tucked Crew T-Shirt<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="699">
+                <p class="born" style="display: none;" id="price">6</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Sabrent-4-Port-Individual-Switches-HB-UMLS/dp/B00BWF5U0M/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                           <div class="top-right">
+                             <span class="sale-tag">Sale!</span>
+                           </div>
+                           
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/712PsQVOWTL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price-sale">
+                                <span class="price-tag">$6.99 <strike>$12.99</strike>
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Sabrent 4-Port USB 2.0 Hub With Individual Power Switches And LEDs<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="clothing prd shipping offers" id="2299">
+                <p class="born" style="display: none;" id="price">22</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Lokai-Classic-Bracelet/dp/B00XTWALL4/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/31JHmjkDRKL._UY395_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$22.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-o"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Lokai Classic Bracelet<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="1599">
+                <p class="born" style="display: none;" id="price">15</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Rubbermaid-Easy-Storage-Container-42-Piece/dp/B00COK3FD8/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/41bwydgZ+2L.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$15.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Rubbermaid Easy Find Lid Food Storage Container, 42-Piece Set<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="1188">
+                <p class="born" style="display: none;" id="price">11</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Honeywell-HT-900-TurboForce-Circulator-Black/dp/B001R1RXUG/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/71yQJc5kOPL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$11.88
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Honeywell HT-900 TurboForce Air Circulator Fan, Black<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="8899">
+                <p class="born" style="display: none;" id="price">88</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/dp/B018UQ5AMS/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/81vmITBcqqL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$88.99
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-o">
+                            </span></div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Keurig K55 Coffee Maker, Black<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="home prd shipping offers" id="458">
+                <p class="born" style="display: none;" id="price">4</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/dp/B00006IFAQ/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/815kVAi4jxL._SL1500_.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$4.58
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Roll Over Image To Zoom In
+Paper Mate Pink Pearl Premium Erasers, 3 P..<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><li class="electronics prd shipping offers" id="628">
+                <p class="born" style="display: none;" id="price">6</p>
+                 <div class="col-md-4">
+                     <a href="https://www.amazon.com/Panasonic-Headphones-RP-HJE120-Comfort-Fit-Compatible/dp/B003EM6AOG/" target="_BLANK" class="thumbnail" id="product-link">
+                         <div class="frontpage_square">
+                         
+                  <div>
+                      <img src="./The Best Products, All The Time. _ localhost_8888_files/3122Iz+1EWL.jpg" class="img img-responsive full-width" id="p-image">
+                  </div>
+
+                
+                              <div class="top-right-price">
+                                <span class="price-tag">$6.28
+                                </span>
+                              </div>
+                              
+                            <div class="top-left">
+                                 <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="bottom-center">
+                                <span href="#">Buy Now</span>
+                            </div>
+
+                            <div class="product_name">
+                              <p class="product-text"> Panasonic ErgoFit Best In Class In-Ear Earbud Headphones<span class="click-to-buy"><br>BUY NOW <span class="ss-icon">link</span></span>
+                              </p>
+                            </div>
+
+                         </div>
+                     </a>
+                </div>
+              </li><button class="sort" style="display: none !important; visibility: hidden !important; opacity: 0 !important; width: 0px !important; height: 0px !important;" data-sort="born">
+          Sort
+        </button></ul>
+
+      </article>
+    </div>
+
+    </div>
+
+    <script type="text/javascript">
+    var options = {
+    valueNames: [ 'born' ]
+    };
+
+    var userList = new List('products', options);
+    </script>
+        </div>
+      </div>
+    </div></section>
+    <!-------------------------->
+
+    <!-- Footer -->
+    <script src="./The Best Products, All The Time. _ localhost_8888_files/bootstrap.min.js"></script>
+<script src="./The Best Products, All The Time. _ localhost_8888_files/jquery.hideseek.min.js"></script>
+<script src="./The Best Products, All The Time. _ localhost_8888_files/filtering.js"></script>
+<script src="./The Best Products, All The Time. _ localhost_8888_files/engine.js"></script>
+
+
+    <!----------->
+
+  
+
+</body></html>

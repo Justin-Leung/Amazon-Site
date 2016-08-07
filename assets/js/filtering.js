@@ -7,21 +7,56 @@ $(document).ready(function() {
   var niche = 'All';
 
   $( "#slider-range" ).bind( "slidechange", function(event, ui) {
-      pricemin = $("#slider-range").slider("values")[0];
-      pricemax = $("#slider-range").slider("values")[1];
+      pricemin = $("#slider-range").slider("values")[0] * 100;
+      pricemax = $("#slider-range").slider("values")[1] * 100;
 
-      console.log('min:' + pricemin);
-      console.log('max:' + pricemax);
+      $('.prd').map(function () {
+
+        if (this.id > pricemin && this.id < pricemax) {
+          $('#' + this.id).show();
+        } else {
+          $('#' + this.id).hide();
+        }
+
+      })
   });
 
+  var shipping = 'false'; // Not Clicked Yet
+  var offers = 'false'; // Not Clicked Yet
+  var auctions = 'false'; // Not Clicked Yet
+
   $('input[type="checkbox"]').change(function() {
-    if(checked.indexOf(this.id) >= 0) {
-      checked = checked.replace(this.id,'');
-    } else {
-      checked = checked + this.id;
+
+    if(this.id === 'Shipping') {
+      if(shipping === 'false') {
+        $('.shipping').show();
+        shipping = 'true';
+      } else {
+        $('.shipping').hide();
+        shipping = 'false';
+      }
     }
 
-    console.log(checked);
+    else if(this.id === 'Special') {
+      if(offers === 'false') {
+        $('.offers').show();
+        offers = 'true';
+      } else {
+        $('.offers').hide();
+        offers = 'false';
+      }
+    }
+
+    else if (this.id === 'Auctions') {
+      if(auctions === 'false') {
+        $('.auctions').show();
+        auctions = 'true';
+      } else {
+        $('.auctions').hide();
+        auctions = 'false';
+      }
+    }
+
   });
 
   // Sorting Select Options
@@ -29,6 +64,13 @@ $(document).ready(function() {
     sorting = this.value;
 
     console.log(sorting);
+
+    if(sorting == 'Descending') {
+      $(".sort").trigger( "click" );
+    } else {
+      $(".sort").trigger( "click" );
+    }
+
   });
 
   // Product Selection Filtering
@@ -43,110 +85,110 @@ $(document).ready(function() {
       niche = $(this).text();
 
       if($(this).text() == 'All') {
-        $('.books').fadeTo('fast', 1);
-        $('.movies').fadeTo('fast', 1);
-        $('.electronics').fadeTo('fast', 1);
-        $('.home').fadeTo('fast', 1);
-        $('.beauty').fadeTo('fast', 1);
-        $('.toys').fadeTo('fast', 1);
-        $('.clothing').fadeTo('fast', 1);
-        $('.outdoors').fadeTo('fast', 1);
-        $('.other').fadeTo('fast', 1);
+        $('.books').show();
+        $('.movies').show();
+        $('.electronics').show();
+        $('.home').show();
+        $('.beauty').show();
+        $('.toys').show();
+        $('.clothing').show();
+        $('.outdoors').show();
+        $('.other').show();
       }
 
       else if($(this).text() == 'Books') {
-        $('.books').fadeTo('fast', 1);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 0.2);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').show();
+        $('.movies').hide();
+        $('.electronics').hide();
+        $('.home').hide();
+        $('.beauty').hide();
+        $('.toys').hide();
+        $('.clothing').hide();
+        $('.outdoors').hide();
+        $('.other').hide();
       }
 
       else if($(this).text() == 'Movies') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 1);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 0.2);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').show();
+        $('.electronics').hide();
+        $('.home').hide();
+        $('.beauty').hide();
+        $('.toys').hide();
+        $('.clothing').hide();
+        $('.outdoors').hide();
+        $('.other').hide();
       }
 
       else if($(this).text() == 'Electronics') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 1);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 0.2);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').hide();
+        $('.electronics').show();
+        $('.home').hide();
+        $('.beauty').hide();
+        $('.toys').hide();
+        $('.clothing').hide();
+        $('.outdoors').hide();
+        $('.other').hide();
       }
 
       else if($(this).text() == 'Home') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 1);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 0.2);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').hide();
+        $('.electronics').hide();
+        $('.home').show();
+        $('.beauty').hide();
+        $('.toys').hide();
+        $('.clothing').hide();
+        $('.outdoors').hide();
+        $('.other').hide();
       }
 
       else if($(this).text() == 'Beauty') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 1);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 0.2);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').hide();
+        $('.electronics').hide();
+        $('.home').hide();
+        $('.beauty').show();
+        $('.toys').hide();
+        $('.clothing').hide();
+        $('.outdoors').hide();
+        $('.other').hide();
       }
 
       else if($(this).text() == 'Toys') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 1);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 0.2);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').hide();
+        $('.electronics').hide();
+        $('.home').hide();
+        $('.beauty').hide();
+        $('.toys').show();
+        $('.clothing').hide();
+        $('.outdoors').hide();
+        $('.other').hide();
       }
 
       else if($(this).text() == 'Clothing') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 1);
-        $('.outdoors').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').hide();
+        $('.electronics').hide();
+        $('.home').hide();
+        $('.beauty').hide();
+        $('.toys').hide();
+        $('.clothing').show();
+        $('.outdoors').hide();
       }
 
       else if($(this).text() == 'Outdoors') {
-        $('.books').fadeTo('fast', 0.2);
-        $('.movies').fadeTo('fast', 0.2);
-        $('.electronics').fadeTo('fast', 0.2);
-        $('.home').fadeTo('fast', 0.2);
-        $('.beauty').fadeTo('fast', 0.2);
-        $('.toys').fadeTo('fast', 0.2);
-        $('.clothing').fadeTo('fast', 0.2);
-        $('.outdoors').fadeTo('fast', 1);
-        $('.other').fadeTo('fast', 0.2);
+        $('.books').hide();
+        $('.movies').hide();
+        $('.electronics').hide();
+        $('.home').hide();
+        $('.beauty').hide();
+        $('.toys').hide();
+        $('.clothing').hide();
+        $('.outdoors').show();
+        $('.other').hide();
       }
 
     e.preventDefault();

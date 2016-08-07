@@ -9,10 +9,12 @@ error_reporting(0);
 include($_SERVER['DOCUMENT_ROOT'] . '/core/init.php');
 include($_SERVER['DOCUMENT_ROOT'] . '/core/extract.php');
 
+/*
 mysqli_query($db, 'TRUNCATE TABLE products');
 $product_page_num = 0;
 $p = 0;
 $products = array();
+*/
 
 /****************************************************
 
@@ -59,7 +61,7 @@ for ($product_number=0; $product_number < 29; $product_number++) {
   $product_asin = getASIN($product_url);
 
   /* Step #3 */
-  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/core/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
+  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
 
   /* Step #4 */
   if(!isset($sxml->Items->Request->Errors->Error->Message) && isset($sxml->Items->Item)) {
@@ -82,8 +84,13 @@ for ($product_number=0; $product_number < 29; $product_number++) {
       $product_niche = isset($Item->ItemAttributes->Binding) ? $Item->ItemAttributes->Binding : 'Other';
 
       /* Rating */
-      $product_rating = $amazon_page->find('.zg_reviews', $p)->children(0)->children(0)->children(0)->children(0)->plaintext;
-      $product_rating = round_to_half((float)substr($product_rating, 0, 3));
+
+      if(is_object($amazon_page->find('.zg_reviews', $p)->children(0)->children(0)->children(0)->children(0)->plaintext)) {
+        $product_rating = $amazon_page->find('.zg_reviews', $p)->children(0)->children(0)->children(0)->children(0)->plaintext;
+        $product_rating = round_to_half((float)substr($product_rating, 0, 3));
+      } else {
+        $product_rating = 5;
+      }
 
       /* Price */
       $product_price = $amazon_page->find('.zg_price', $p)->children(0)->plaintext;
@@ -138,7 +145,7 @@ for ($product_number=30; $product_number < 66; $product_number++) {
   $product_asin = getASIN($product_url);
 
   /* Step #3 */
-  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/core/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
+  $sxml = simplexml_load_file("http://$_SERVER[HTTP_HOST]" . '/access.php?q=' . $product_asin); // Change HTTP to HTTPS or www or non-www
 
   /* Step #4 */
   if(!isset($sxml->Items->Request->Errors->Error->Message) && isset($sxml->Items->Item)) {

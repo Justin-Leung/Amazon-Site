@@ -118,7 +118,7 @@ function round_to_half($num) {
 
 function getRating($product_rating) {
   if($product_rating == '5') return "<span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span>";
-  elseif($product_rating == '4.5') return "<span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star-half-o'></span> </span> <span class='fa fa-star-o'></span>";
+  elseif($product_rating == '4.5') return "<span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star-half-o'>";
   elseif($product_rating == '4') return "<span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star-o'></span>";
   elseif($product_rating == '3.5') return "<span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star-half-o'></span> <span class='fa fa-star-o'></span>";
   elseif($product_rating == '3') return "<span class='fa fa-star'></span> <span class='fa fa-star'></span> <span class='fa fa-star'></span><span class='fa fa-star-o'></span> <span class='fa fa-star-o'></span>";

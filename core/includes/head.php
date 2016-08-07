@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="/assets/css/ss-pika.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/extra/list.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
   $(function() {
@@ -26,13 +27,6 @@
       " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
   </script>
-
-  <style type="text/css">
-    .product-wall {
-      margin: 100px !important;
-    }
-  </style>
-  <script type="text/javascript" src="assets/extra/freewall.js"></script>
 
 <?php
 
@@ -76,18 +70,53 @@ if($color !== '') {
     letter-spacing: 0.3px;
   }
 
+  .ui-widget-header {
+    background: ' . $color . ' !important;
+  }
+
+  #amount {
+    color: ' . $color . ' !important;
+  }
+
   .main-search:focus {
     border-color: ' . $color . ';
   }
 
   .product-selection a:hover {
-    color: ' . $color . ';
     border-color: ' . $color . ';
+    background-color: ' . $color . ';
   }
 
   .sale-tag {
     background-color: ' . $color . ';
+  }
+
+  </style>
+  ';
 }
+
+
+if($button_color !== '') {
+
+  echo '
+  <style>
+
+    .bottom-center {
+      background-color: ' . $button_color . ';
+    }
+
+  </style>
+  ';
+}
+
+if($sale_color !== '') {
+
+  echo '
+  <style>
+
+    .sale-tag {
+      background-color: ' . $sale_color . ';
+    }
 
   </style>
   ';
