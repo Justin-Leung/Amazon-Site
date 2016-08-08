@@ -64,7 +64,7 @@
               $product_niche = $row['niche'];
               $product_image = $row['image_link'];
               $product_asin = $row['asin'];
-              $product_link = $row['link'];
+              $product_link = makeAff($row['link'], $AssociateTag);
 
               if($row['free_shipping'] == 'true') {
                 $product_shipping = 'shipping';
@@ -155,6 +155,7 @@
     </div>
 
     </div>
+  </div>
 
     <script type="text/javascript">
     var options = {

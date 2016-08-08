@@ -5,7 +5,7 @@
 */
 
 // Main Settings
-$site_name = ''; // Websites Header Text
+$site_name = 'Amazons Best'; // Websites Header Text
 $tagline = ''; // Website Tagline
 $description = ''; // Website Description
 $google_analytics = ''; // Copy and Paste Your Google Analytics Code Here

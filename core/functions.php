@@ -64,6 +64,15 @@ function makeAffiliate($product_link) {
   return $pid;
 }
 
+function makeAff($product_link, $AssociateTag) {
+  $affiliate = "?ie=UTF8&tag=" . $AssociateTag . "&linkCode=as2&camp=1789&creativeASIN=";
+  $link = $product_link;
+  if (isset($link)) {
+  	$pid = substr(strstr($link,"p/"),2,10);
+  	return "http://www.amazon.com/gp/product/" . $pid . $affiliate . $pid;
+  }
+}
+
 function getBackgroundImage($snippet) {
   $pattern = '/background-image:\s*url\(\s*([\'"]*)(?P<file>[^\1]+)\1\s*\)/i';
   $matches = array();
